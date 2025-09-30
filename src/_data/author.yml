@@ -1,0 +1,191 @@
+# Author Profile
+# Constitutional compliance: Professional bio with tech focus
+# Last updated: 2025-09-30
+
+# Basic Information
+name: "Alex Chen"
+role: "Software Engineer & Technical Writer"
+tagline: "Building scalable systems and sharing knowledge"
+email: "alex@tech-insights.dev"
+
+# Professional Summary
+bio: |
+  Software engineer with 8+ years of experience building high-performance web applications and distributed systems. 
+  
+  I specialize in full-stack JavaScript development, systems programming with Rust and Go, and cloud architecture. 
+  My passion lies in writing clean, maintainable code and sharing insights about modern development practices.
+  
+  When I'm not coding, you'll find me contributing to open source projects, mentoring junior developers, or exploring 
+  the latest developments in WebAssembly and edge computing.
+
+# Short bio for article bylines
+bio_short: "Software engineer specializing in web performance and systems programming. 8+ years building scalable applications."
+
+# Professional Links
+links:
+  website: "https://tech-insights.dev"
+  github: "https://github.com/alexchen"
+  twitter: "https://twitter.com/alexchen_dev"
+  linkedin: "https://linkedin.com/in/alexchen-dev"
+  mastodon: "https://hachyderm.io/@alexchen"
+  
+# Avatar/Photo
+avatar:
+  src: "/assets/images/author-avatar.jpg"
+  alt: "Alex Chen - Software Engineer"
+  width: 200
+  height: 200
+
+# Skills and Technologies
+skills:
+  languages:
+    primary: ["JavaScript", "TypeScript", "Python", "Rust"]
+    secondary: ["Go", "SQL", "Bash", "C++"]
+  frameworks:
+    frontend: ["React", "Vue.js", "Svelte"]
+    backend: ["Node.js", "FastAPI", "Axum", "Gin"]
+  tools:
+    development: ["VS Code", "Git", "Docker", "Kubernetes"]
+    cloud: ["AWS", "GCP", "Vercel", "Netlify"]
+  specialties:
+    - "Web Performance Optimization"
+    - "Distributed Systems"
+    - "API Design"
+    - "DevOps & CI/CD"
+    - "Technical Writing"
+
+# Work Experience (relevant highlights)
+experience:
+  current:
+    title: "Senior Software Engineer"
+    company: "TechFlow Solutions"
+    duration: "2022 - Present"
+    description: "Leading full-stack development of cloud-native applications serving 100k+ users."
+  
+  previous:
+    - title: "Full-Stack Developer"
+      company: "StartupLab"
+      duration: "2019 - 2022"
+      description: "Built scalable web applications from MVP to production using modern JavaScript stack."
+    
+    - title: "Software Developer"
+      company: "DataSys Corp"
+      duration: "2017 - 2019"
+      description: "Developed high-performance data processing pipelines and RESTful APIs."
+
+# Education
+education:
+  degree: "Bachelor of Science in Computer Science"
+  university: "State University of Technology"
+  graduation: "2017"
+  focus: "Software Engineering & Algorithms"
+
+# Certifications & Achievements
+certifications:
+  - name: "AWS Solutions Architect - Associate"
+    issuer: "Amazon Web Services"
+    year: "2023"
+  - name: "Google Cloud Professional Cloud Architect"
+    issuer: "Google Cloud"
+    year: "2022"
+
+# Open Source Contributions
+opensource:
+  active_projects:
+    - name: "web-perf-toolkit"
+      description: "Performance monitoring utilities for web applications"
+      role: "Maintainer"
+      url: "https://github.com/alexchen/web-perf-toolkit"
+    
+    - name: "rust-api-templates"
+      description: "Production-ready API templates in Rust"
+      role: "Creator"
+      url: "https://github.com/alexchen/rust-api-templates"
+  
+  contributions:
+    - "50+ commits to Eleventy core"
+    - "Documentation improvements for Prism.js"
+    - "Bug fixes in various npm packages"
+
+# Speaking & Writing
+speaking:
+  talks:
+    - title: "Building Fast Web Apps: A Performance Deep Dive"
+      event: "WebDev Conference 2024"
+      date: "2024-03-15"
+    
+    - title: "Rust for JavaScript Developers"
+      event: "Local Meetup Group"
+      date: "2023-11-20"
+
+writing:
+  publications:
+    - title: "Modern Web Performance Patterns"
+      publisher: "Tech Weekly Magazine"
+      date: "2024-01-10"
+      url: "https://techweekly.com/modern-web-performance"
+    
+    - title: "Introduction to WebAssembly"
+      publisher: "Developer Blog Network"
+      date: "2023-09-05"
+      url: "https://devblog.net/intro-to-webassembly"
+
+# Contact Preferences
+contact:
+  email: "alex@tech-insights.dev"
+  preferred_method: "email"
+  response_time: "24-48 hours"
+  available_for:
+    - "Technical writing collaboration"
+    - "Speaking opportunities"
+    - "Open source contributions"
+    - "Mentoring discussions"
+  not_available_for:
+    - "Freelance projects"
+    - "Job recruitment"
+
+# Location & Timezone
+location:
+  city: "San Francisco"
+  state: "CA"
+  country: "USA"
+  timezone: "America/Los_Angeles"
+  remote_friendly: true
+
+# Personal Interests (brief, tech-related)
+interests:
+  - "WebAssembly and edge computing"
+  - "Sustainable software development"
+  - "Developer productivity tools"
+  - "Technical documentation"
+  - "Open source community building"
+
+# Blog-specific metadata
+blog:
+  author_since: "2023-01-01"
+  post_count: 0 # Will be dynamically calculated
+  categories_authored:
+    - "Web Development"
+    - "Systems Programming" 
+    - "Performance"
+    - "DevOps"
+    - "Career Development"
+  
+  writing_style: "practical, example-driven, accessible"
+  typical_post_length: "1500-3000 words"
+  posting_frequency: "1-2 posts per month"
+
+# SEO and structured data
+seo:
+  schema_type: "Person"
+  job_title: "Software Engineer & Technical Writer"
+  works_for: "TechFlow Solutions"
+  knows_about:
+    - "JavaScript"
+    - "TypeScript"
+    - "Python"
+    - "Rust"
+    - "Web Development"
+    - "Systems Programming"
+    - "Cloud Computing"
+    - "Performance Optimization"

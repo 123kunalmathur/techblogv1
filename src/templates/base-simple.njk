@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/den-inspired.css">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS Feed" href="/feed.xml">
+</head>
+<body>
+  <div class="site-container">
+    <header class="site-header">
+      <nav class="header-nav">
+        <a href="/" class="site-title">{{ site.title }}</a>
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
+          <li><a href="/articles/" class="nav-link{% if '/articles/' in page.url %} active{% endif %}">Articles</a></li>
+          <li><a href="/about/" class="nav-link{% if '/about/' in page.url %} active{% endif %}">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main class="main-content">
+      {{ content | safe }}
+    </main>
+    
+    <footer class="site-footer">
+      <p class="footer-text">
+        © {% year %} {{ author.name }}. Built with ☕ and ♥ using <a href="https://11ty.dev">Eleventy</a>.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

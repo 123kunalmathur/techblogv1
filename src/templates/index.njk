@@ -1,0 +1,253 @@
+---
+layout: base
+---
+
+<div class="homepage">
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="author-intro">
+        <div class="author-photo">
+          <img src="{{ site.author.photo }}" 
+               alt="{{ site.author.name }}" 
+               class="author-image"
+               width="200" 
+               height="200">
+        </div>
+        
+        <div class="author-details">
+          <h1 class="author-name">{{ author.name }}</h1>
+          <p class="author-title">{{ author.role }}</p>
+          <div class="author-bio">
+            {{ author.bio_short }}
+          </div>
+          
+          {% if author.skills and author.skills.languages %}
+          <div class="author-skills">
+            <h3 class="skills-heading">Expertise</h3>
+            <ul class="skills-list">
+              {% for skill in site.author.skills | slice(0, 8) %}
+              <li class="skill-item">{{ skill }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+          
+          {% if site.author.social %}
+          <div class="author-social">
+            <h3 class="social-heading">Connect</h3>
+            <ul class="social-links">
+              {% if site.author.social.github %}
+              <li>
+                <a href="{{ site.author.social.github }}" 
+                   rel="noopener" 
+                   target="_blank" 
+                   class="social-link social-github"
+                   aria-label="GitHub Profile">
+                  GitHub
+                </a>
+              </li>
+              {% endif %}
+              {% if site.author.social.linkedin %}
+              <li>
+                <a href="{{ site.author.social.linkedin }}" 
+                   rel="noopener" 
+                   target="_blank" 
+                   class="social-link social-linkedin"
+                   aria-label="LinkedIn Profile">
+                  LinkedIn
+                </a>
+              </li>
+              {% endif %}
+              {% if site.author.social.twitter %}
+              <li>
+                <a href="{{ site.author.social.twitter }}" 
+                   rel="noopener" 
+                   target="_blank" 
+                   class="social-link social-twitter"
+                   aria-label="Twitter Profile">
+                  Twitter
+                </a>
+              </li>
+              {% endif %}
+              {% if site.author.email %}
+              <li>
+                <a href="mailto:{{ site.author.email }}" 
+                   class="social-link social-email"
+                   aria-label="Send Email">
+                  Email
+                </a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="recent-articles">
+    <div class="section-content">
+      <header class="section-header">
+        <h2 class="section-title">Recent Articles</h2>
+        <p class="section-description">Latest thoughts on software development and technology</p>
+      </header>
+
+      {% set recentPosts = collections.posts | slice(0, 6) %}
+      {% if recentPosts.length > 0 %}
+      <div class="articles-grid">
+        {% for post in recentPosts %}
+        <article class="article-card{% if post.data.featured %} featured{% endif %}">
+          <header class="card-header">
+            <h3 class="card-title">
+              <a href="{{ post.url }}">{{ post.data.title }}</a>
+            </h3>
+            
+            <div class="card-meta">
+              <time datetime="{{ post.data.date | htmlDateString }}" class="card-date">
+                {{ post.data.date | readableDate }}
+              </time>
+              <span class="card-reading-time">{{ post.templateContent | readingTime }} min read</span>
+            </div>
+          </header>
+          
+          <div class="card-content">
+            <p class="card-excerpt">{{ post.data.excerpt }}</p>
+            
+            {% if post.data.tags and post.data.tags.length > 0 %}
+            <div class="card-tags">
+              {% for tag in post.data.tags | slice(0, 3) %}
+              <a href="/articles/tag/{{ tag | slug }}/" class="tag-link">{{ tag }}</a>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+          
+          <footer class="card-footer">
+            <a href="{{ post.url }}" class="read-more">Read article →</a>
+          </footer>
+        </article>
+        {% endfor %}
+      </div>
+      
+      <div class="section-actions">
+        <a href="/articles/" class="view-all-link">View all articles →</a>
+      </div>
+      
+      {% else %}
+      <div class="empty-state">
+        <h3>Coming Soon</h3>
+        <p>I'm working on some great content. Check back soon for my latest articles on software development and technology.</p>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+  {% set featuredPosts = collections.featuredPosts %}
+  {% if featuredPosts.length > 0 %}
+  <section class="featured-articles">
+    <div class="section-content">
+      <header class="section-header">
+        <h2 class="section-title">Featured Articles</h2>
+        <p class="section-description">Popular and recommended reads</p>
+      </header>
+
+      <div class="featured-grid">
+        {% for post in featuredPosts | slice(0, 3) %}
+        <article class="featured-card">
+          <header class="featured-header">
+            <h3 class="featured-title">
+              <a href="{{ post.url }}">{{ post.data.title }}</a>
+            </h3>
+            
+            <div class="featured-meta">
+              <time datetime="{{ post.data.date | htmlDateString }}">
+                {{ post.data.date | readableDate }}
+              </time>
+              <span class="featured-reading-time">{{ post.templateContent | readingTime }} min read</span>
+            </div>
+          </header>
+          
+          <div class="featured-content">
+            <p class="featured-excerpt">{{ post.data.excerpt }}</p>
+          </div>
+          
+          {% if post.data.tags and post.data.tags.length > 0 %}
+          <div class="featured-tags">
+            {% for tag in post.data.tags | slice(0, 3) %}
+            <span class="featured-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% set allTags = collections.tagList %}
+  {% if allTags.length > 0 %}
+  <section class="topics-section">
+    <div class="section-content">
+      <header class="section-header">
+        <h2 class="section-title">Topics</h2>
+        <p class="section-description">Explore articles by topic</p>
+      </header>
+
+      <div class="topics-cloud">
+        {% for tag in allTags | slice(0, 15) %}
+        {% set taggedPosts = collections.posts | tagged(tag) %}
+        <a href="/articles/tag/{{ tag | slug }}/" 
+           class="topic-link" 
+           data-count="{{ taggedPosts.length }}">
+          {{ tag }} <span class="topic-count">({{ taggedPosts.length }})</span>
+        </a>
+        {% endfor %}
+      </div>
+      
+      <div class="section-actions">
+        <a href="/articles/" class="browse-all-link">Browse all topics →</a>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+</div>
+
+{# Enhanced structured data for homepage #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "{{ site.title }}",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "jobTitle": "{{ site.author.title }}",
+    "description": "{{ site.author.bio }}",
+    "url": "{{ site.url }}/about/",
+    "sameAs": [
+      {% if site.author.social.github %}"{{ site.author.social.github }}"{% endif %}
+      {% if site.author.social.linkedin %}{% if site.author.social.github %},{% endif %}"{{ site.author.social.linkedin }}"{% endif %}
+      {% if site.author.social.twitter %}{% if site.author.social.github or site.author.social.linkedin %},{% endif %}"{{ site.author.social.twitter }}"{% endif %}
+    ]
+  },
+  "blogPost": [
+    {% for post in collections.posts | slice(0, 5) %}
+    {
+      "@type": "BlogPosting",
+      "headline": "{{ post.data.title }}",
+      "description": "{{ post.data.excerpt }}",
+      "url": "{{ site.url }}{{ post.url }}",
+      "datePublished": "{{ post.data.date | htmlDateString }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ site.author.name }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>

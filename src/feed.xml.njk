@@ -1,0 +1,37 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title }}</title>
+    <description>{{ site.description }}</description>
+    <link>{{ site.url }}</link>
+    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
+    <language>{{ site.language }}</language>
+    <lastBuildDate>{{ site.build.timestamp }}</lastBuildDate>
+    <generator>Eleventy</generator>
+    <copyright>© {% year %} {{ author.name }}</copyright>
+    <managingEditor>{{ author.email }} ({{ author.name }})</managingEditor>
+    <webMaster>{{ author.email }} ({{ author.name }})</webMaster>
+    
+    {% for post in collections.posts | reverse | slice(0, 20) %}
+    <item>
+      <title>{{ post.data.title | escape }}</title>
+      <description>{{ post.data.description | escape }}</description>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+      <pubDate>{{ post.date | rssDate }}</pubDate>
+      <author>{{ author.email }} ({{ author.name }})</author>
+      {% if post.data.tags %}
+      {% for tag in post.data.tags %}
+      {% if tag != "post" %}
+      <category>{{ tag }}</category>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

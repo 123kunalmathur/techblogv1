@@ -37,58 +37,59 @@
 - Include exact file paths in descriptions
 
 ## Path Conventions
-- **Single project**: `src/`, `tests/` at repository root
+- **Static site**: `content/`, `src/templates/`, `src/styles/`, `dist/` at repository root
 - **Web app**: `backend/src/`, `frontend/src/`
 - **Mobile**: `api/src/`, `ios/src/` or `android/src/`
-- Paths shown below assume single project - adjust based on plan.md structure
+- Paths shown below assume static site - adjust based on plan.md structure
 
 ## Phase 3.1: Setup
-- [ ] T001 Create project structure per implementation plan
-- [ ] T002 Initialize [language] project with [framework] dependencies
-- [ ] T003 [P] Configure linting and formatting tools
+- [ ] T001 Create static site structure per implementation plan
+- [ ] T002 Initialize build tools (static site generator, CSS preprocessor, etc.)
+- [ ] T003 [P] Configure accessibility testing tools and performance monitoring
 
 ## Phase 3.2: Tests First (TDD) ⚠️ MUST COMPLETE BEFORE 3.3
 **CRITICAL: These tests MUST be written and MUST FAIL before ANY implementation**
-- [ ] T004 [P] Contract test POST /api/users in tests/contract/test_users_post.py
-- [ ] T005 [P] Contract test GET /api/users/{id} in tests/contract/test_users_get.py
-- [ ] T006 [P] Integration test user registration in tests/integration/test_registration.py
-- [ ] T007 [P] Integration test auth flow in tests/integration/test_auth.py
+- [ ] T004 [P] Accessibility test for WCAG 2.1 AA compliance in tests/accessibility/test_wcag.js
+- [ ] T005 [P] Performance test for Core Web Vitals in tests/performance/test_core_vitals.js
+- [ ] T006 [P] Content validation test for Markdown parsing in tests/content/test_markdown.js
+- [ ] T007 [P] Build output validation test in tests/build/test_static_output.js
 
 ## Phase 3.3: Core Implementation (ONLY after tests are failing)
-- [ ] T008 [P] User model in src/models/user.py
-- [ ] T009 [P] UserService CRUD in src/services/user_service.py
-- [ ] T010 [P] CLI --create-user in src/cli/user_commands.py
-- [ ] T011 POST /api/users endpoint
-- [ ] T012 GET /api/users/{id} endpoint
-- [ ] T013 Input validation
-- [ ] T014 Error handling and logging
+- [ ] T008 [P] HTML templates in src/templates/ (post.html, page.html, index.html)
+- [ ] T009 [P] CSS styles in src/styles/ (main.css, responsive.css)
+- [ ] T010 [P] Minimal JavaScript utilities in src/scripts/utils.js
+- [ ] T011 Markdown content processing pipeline
+- [ ] T012 Static file generation build script
+- [ ] T013 Image optimization and responsive images
+- [ ] T014 Syntax highlighting for code blocks
 
 ## Phase 3.4: Integration
-- [ ] T015 Connect UserService to DB
-- [ ] T016 Auth middleware
-- [ ] T017 Request/response logging
-- [ ] T018 CORS and security headers
+- [ ] T015 Build pipeline integration (content → templates → static files)
+- [ ] T016 Asset optimization (CSS minification, image compression)
+- [ ] T017 RSS feed generation
+- [ ] T018 Sitemap generation for SEO
 
 ## Phase 3.5: Polish
-- [ ] T019 [P] Unit tests for validation in tests/unit/test_validation.py
-- [ ] T020 Performance tests (<200ms)
-- [ ] T021 [P] Update docs/api.md
-- [ ] T022 Remove duplication
-- [ ] T023 Run manual-testing.md
+- [ ] T019 [P] Content validation rules in tests/content/test_validation.js
+- [ ] T020 Performance optimization (<2s load time on 3G)
+- [ ] T021 [P] Update documentation (README.md, deployment guide)
+- [ ] T022 Remove code duplication and optimize build
+- [ ] T023 Final accessibility and performance validation
 
 ## Dependencies
 - Tests (T004-T007) before implementation (T008-T014)
-- T008 blocks T009, T015
-- T016 blocks T018
+- T008 (templates) needed for T011 (content processing)
+- T011 (content processing) blocks T015 (build pipeline)
+- T016 (asset optimization) blocks T020 (performance optimization)
 - Implementation before polish (T019-T023)
 
 ## Parallel Example
 ```
 # Launch T004-T007 together:
-Task: "Contract test POST /api/users in tests/contract/test_users_post.py"
-Task: "Contract test GET /api/users/{id} in tests/contract/test_users_get.py"
-Task: "Integration test registration in tests/integration/test_registration.py"
-Task: "Integration test auth in tests/integration/test_auth.py"
+Task: "Accessibility test for WCAG 2.1 AA compliance in tests/accessibility/test_wcag.js"
+Task: "Performance test for Core Web Vitals in tests/performance/test_core_vitals.js" 
+Task: "Content validation test for Markdown parsing in tests/content/test_markdown.js"
+Task: "Build output validation test in tests/build/test_static_output.js"
 ```
 
 ## Notes
@@ -104,24 +105,26 @@ Task: "Integration test auth in tests/integration/test_auth.py"
    - Each contract file → contract test task [P]
    - Each endpoint → implementation task
    
-2. **From Data Model**:
-   - Each entity → model creation task [P]
-   - Relationships → service layer tasks
+2. **From Content Structure**:
+   - Each content type (posts, pages) → template task [P]
+   - Content processing → build pipeline tasks
    
-3. **From User Stories**:
-   - Each story → integration test [P]
-   - Quickstart scenarios → validation tasks
+3. **From Static Site Requirements**:
+   - Accessibility tests → WCAG compliance validation
+   - Performance tests → Core Web Vitals validation
+   - SEO features → sitemap and feed generation
 
 4. **Ordering**:
-   - Setup → Tests → Models → Services → Endpoints → Polish
+   - Setup → Tests → Templates → Content Processing → Build Pipeline → Polish
    - Dependencies block parallel execution
 
 ## Validation Checklist
 *GATE: Checked by main() before returning*
 
-- [ ] All contracts have corresponding tests
-- [ ] All entities have model tasks
+- [ ] All content types have corresponding templates
+- [ ] All accessibility and performance tests included
 - [ ] All tests come before implementation
-- [ ] Parallel tasks truly independent
+- [ ] Parallel tasks truly independent (different files)
 - [ ] Each task specifies exact file path
 - [ ] No task modifies same file as another [P] task
+- [ ] Static site generator and build tools properly configured

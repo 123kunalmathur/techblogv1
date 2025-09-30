@@ -1,0 +1,42 @@
+{
+  "name": "clean-minimal-tech-blog",
+  "version": "1.0.0",
+  "description": "A clean, minimal tech blog built with Eleventy",
+  "main": ".eleventy.js",
+  "scripts": {
+    "build": "npm run build:css && npx @11ty/eleventy",
+    "build:css": "sass src/styles/den-inspired.scss:_site/css/den-inspired.css --style=compressed",
+    "dev": "npm run build:css && npx @11ty/eleventy --serve --port=8080",
+    "dev:css": "sass src/styles/den-inspired.scss:_site/css/den-inspired.css --watch",
+    "clean": "rm -rf _site",
+    "test": "npm run test:accessibility && npm run test:performance && npm run test:content",
+    "test:accessibility": "node tests/accessibility/test_wcag_compliance.js",
+    "test:performance": "node tests/performance/test_core_web_vitals.js",
+    "test:content": "node tests/content/test_article_schema.js && node tests/content/test_markdown_processing.js",
+    "lint": "prettier --check *.js src/**/*.scss",
+    "lint:fix": "prettier --write *.js src/**/*.scss"
+  },
+  "keywords": [
+    "blog",
+    "eleventy",
+    "static-site",
+    "minimal",
+    "tech-blog"
+  ],
+  "author": "Tech Blogger",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "js-yaml": "^4.1.0",
+    "luxon": "^3.4.4",
+    "markdown-it": "^14.0.0",
+    "markdown-it-prism": "^2.3.0"
+  },
+  "devDependencies": {
+    "axe-core": "^4.8.3",
+    "html-minifier": "^4.0.0",
+    "playwright": "^1.40.1",
+    "prettier": "^3.1.1",
+    "sass": "^1.69.5"
+  }
+}

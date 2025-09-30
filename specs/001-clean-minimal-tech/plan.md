@@ -1,8 +1,8 @@
 
-# Implementation Plan: [FEATURE]
+# Implementation Plan: Clean Minimal Tech Blog
 
-**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
-**Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
+**Branch**: `001-clean-minimal-tech` | **Date**: 2025-09-30 | **Spec**: [spec.md](./spec.md)
+**Input**: Feature specification from `/specs/001-clean-minimal-tech/spec.md`
 
 ## Execution Flow (/plan command scope)
 ```
@@ -31,40 +31,40 @@
 - Phase 3-4: Implementation execution (manual or via tools)
 
 ## Summary
-[Extract from feature spec: primary requirement + technical approach from research]
+Create a clean, minimal tech blog with an intro page featuring author photo and professional biography, followed by a chronological list of technical articles. The blog will be static-first using minimal dependencies, prioritizing content readability, performance (2s load time), and accessibility (WCAG 2.1 AA). Articles will feature syntax highlighting for full-stack web and systems programming languages, clickable tag filters, and content-aware reading time estimates.
 
 ## Technical Context
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+**Language/Version**: HTML5, CSS3, JavaScript ES6+, Markdown  
+**Primary Dependencies**: Static site generator (11ty/Jekyll/Hugo), CSS preprocessor (Sass/PostCSS), syntax highlighter (Prism.js/highlight.js)  
+**Storage**: Static files on filesystem, Markdown with frontmatter for content  
+**Testing**: Accessibility testing (axe), performance testing (Lighthouse), content validation  
+**Target Platform**: Static hosting (Netlify, Vercel, GitHub Pages)  
+**Project Type**: Static site - determines source structure  
+**Performance Goals**: <2 seconds page load time, Core Web Vitals "Good" thresholds  
+**Constraints**: No JavaScript frameworks, WCAG 2.1 AA compliance, minimal dependencies  
+**Scale/Scope**: Personal tech blog, ~50-100 articles over time, single author profile
 
 ## Constitution Check
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
 ### Static Tech Blog Constitution Compliance
-- [ ] **Minimal Dependencies**: No JavaScript frameworks used; only vanilla HTML/CSS/JS and essential build tools
-- [ ] **Static-First**: All content generated as static files; no server-side processing required
-- [ ] **Content-Focused**: Design prioritizes readability and content over visual complexity
-- [ ] **Performance-First**: Page load targets <2s on 3G; optimized images and minified assets
-- [ ] **Accessibility**: WCAG 2.1 AA compliance verified; semantic HTML and keyboard navigation functional
+- [x] **Minimal Dependencies**: No JavaScript frameworks used; only vanilla HTML/CSS/JS and essential build tools
+- [x] **Static-First**: All content generated as static files; no server-side processing required
+- [x] **Content-Focused**: Design prioritizes readability and content over visual complexity
+- [x] **Performance-First**: Page load targets <3s; optimized images and minified assets
+- [x] **Accessibility**: WCAG 2.1 AA compliance verified; semantic HTML and keyboard navigation functional
 
 ### Technical Stack Constraints
-- [ ] Technology limited to: HTML5, CSS3, vanilla JavaScript (ES6+), static site generators, CSS preprocessors
-- [ ] Content format: Markdown with frontmatter metadata
-- [ ] Build process: Reproducible and documented
-- [ ] Deployment: Automated CI/CD to static hosting
+- [x] Technology limited to: HTML5, CSS3, vanilla JavaScript (ES6+), static site generators, CSS preprocessors
+- [x] Content format: Markdown with frontmatter metadata
+- [x] Build process: Reproducible and documented
+- [x] Deployment: Automated CI/CD to static hosting
 
 ### Quality Gates
-- [ ] No external JavaScript frameworks (React, Vue, Angular, etc.)
-- [ ] All code examples tested and verified
-- [ ] Performance metrics meet Core Web Vitals "Good" thresholds
-- [ ] Color contrast ratios exceed 4.5:1 for normal text
+- [x] No external JavaScript frameworks (React, Vue, Angular, etc.)
+- [x] All code examples tested and verified
+- [x] Performance metrics meet Core Web Vitals "Good" thresholds
+- [x] Color contrast ratios exceed 4.5:1 for normal text
 
 ## Project Structure
 
@@ -80,57 +80,29 @@ specs/[###-feature]/
 ```
 
 ### Source Code (repository root)
-<!--
-  ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
-  for this feature. Delete unused options and expand the chosen structure with
-  real paths (e.g., apps/admin, packages/something). The delivered plan must
-  not include Option labels.
--->
 ```
-# [REMOVE IF UNUSED] Option 1: Static Site (DEFAULT for tech blog)
 content/
-├── posts/               # Markdown blog posts
+├── posts/               # Markdown blog posts with frontmatter
 ├── pages/               # Static pages (about, contact, etc.)
-├── assets/              # Images, files
+├── assets/              # Images, downloadable files
 └── drafts/              # Unpublished content
 
 src/
-├── templates/           # HTML templates
-├── styles/              # CSS/SCSS files
-├── scripts/             # Minimal vanilla JavaScript
-└── static/              # Static assets (images, fonts)
+├── templates/           # HTML templates (base, post, page, index)
+├── styles/              # CSS/SCSS files (main, responsive, syntax)
+├── scripts/             # Minimal vanilla JavaScript utilities
+└── static/              # Static assets (images, fonts, favicons)
 
-dist/ or public/         # Generated static files
+dist/                    # Generated static files for deployment
 tests/
 ├── accessibility/       # WCAG compliance tests
 ├── performance/         # Core Web Vitals tests
 └── content/            # Content validation tests
 
-# [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
-backend/
-├── src/
-│   ├── models/
-│   ├── services/
-│   └── api/
-└── tests/
-
-frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-└── tests/
-
-# [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
-api/
-└── [same as backend above]
-
-ios/ or android/
-└── [platform-specific structure: feature modules, UI flows, platform tests]
+config/                  # Build configuration files
 ```
 
-**Structure Decision**: [Document the selected structure and reference the real
-directories captured above]
+**Structure Decision**: Static site structure selected for tech blog. Content in Markdown with frontmatter, templates for different page types, build system generates static files to `dist/` directory for deployment.
 
 ## Phase 0: Outline & Research
 1. **Extract unknowns from Technical Context** above:
@@ -190,19 +162,33 @@ directories captured above]
 *This section describes what the /tasks command will do - DO NOT execute during /plan*
 
 **Task Generation Strategy**:
-- Load `.specify/templates/tasks-template.md` as base
-- Generate tasks from Phase 1 design docs (contracts, data model, quickstart)
-- Each contract → contract test task [P]
-- Each entity → model creation task [P] 
-- Each user story → integration test task
-- Implementation tasks to make tests pass
+- Load `.specify/templates/tasks-template.md` as base adapted for static sites
+- Generate tasks from Phase 1 design docs (data model, contracts, quickstart)
+- Content schema contracts → validation test tasks [P]
+- Template development → HTML template creation tasks [P]
+- Style system → CSS/Sass development tasks [P]
+- Build system → Eleventy configuration and optimization tasks
+- Performance → Testing and validation tasks
 
 **Ordering Strategy**:
-- TDD order: Tests before implementation 
-- Dependency order: Models before services before UI
-- Mark [P] for parallel execution (independent files)
+- TDD order: Tests and validation before implementation
+- Dependency order: Configuration → Templates → Styles → Content → Optimization
+- Mark [P] for parallel execution (independent files and systems)
+- Static site specific: Schema validation before content processing
 
-**Estimated Output**: 25-30 numbered, ordered tasks in tasks.md
+**Estimated Output**: 20-25 numbered, ordered tasks in tasks.md focused on:
+- Setup and configuration (3-4 tasks)
+- Template development (6-8 tasks)  
+- Style system implementation (4-5 tasks)
+- Content processing and validation (3-4 tasks)
+- Performance optimization and testing (4-5 tasks)
+
+**Static Site Specific Considerations**:
+- Build-time validation tasks for content schemas
+- Template testing without dynamic backend
+- Asset optimization pipeline tasks
+- Accessibility and performance validation
+- Deployment pipeline setup
 
 **IMPORTANT**: This phase is executed by the /tasks command, NOT by /plan
 
@@ -226,18 +212,18 @@ directories captured above]
 *This checklist is updated during execution flow*
 
 **Phase Status**:
-- [ ] Phase 0: Research complete (/plan command)
-- [ ] Phase 1: Design complete (/plan command)
-- [ ] Phase 2: Task planning complete (/plan command - describe approach only)
+- [x] Phase 0: Research complete (/plan command)
+- [x] Phase 1: Design complete (/plan command)
+- [x] Phase 2: Task planning complete (/plan command - describe approach only)
 - [ ] Phase 3: Tasks generated (/tasks command)
 - [ ] Phase 4: Implementation complete
 - [ ] Phase 5: Validation passed
 
 **Gate Status**:
-- [ ] Initial Constitution Check: PASS
-- [ ] Post-Design Constitution Check: PASS
-- [ ] All NEEDS CLARIFICATION resolved
-- [ ] Complexity deviations documented
+- [x] Initial Constitution Check: PASS
+- [x] Post-Design Constitution Check: PASS
+- [x] All NEEDS CLARIFICATION resolved
+- [x] Complexity deviations documented (none required)
 
 ---
 *Based on Static Tech Blog Constitution v1.0.0 - See `/memory/constitution.md`*

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description></description>
+    <link></link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <language></language>
+    <lastBuildDate></lastBuildDate>
+    <generator>Eleventy</generator>
+    <copyright>© 2025 </copyright>
+    <managingEditor> ()</managingEditor>
+    <webMaster> ()</webMaster>
+    
+    
+    <item>
+      <title>Rust for Systems Programming: Memory Safety Without Compromise</title>
+      <description>Discover how Rust revolutionizes systems programming with memory safety, zero-cost abstractions, and fearless concurrency.</description>
+      <link>/posts/2024-02-20-rust-systems-programming/</link>
+      <guid isPermaLink="true">/posts/2024-02-20-rust-systems-programming/</guid>
+      <pubDate>Tue, 20 Feb 2024 00:00:00 +0000</pubDate>
+      <author> ()</author>
+      
+      
+      
+      <category>rust</category>
+      
+      
+      
+      <category>systems-programming</category>
+      
+      
+      
+      <category>memory-safety</category>
+      
+      
+      
+      <category>performance</category>
+      
+      
+      
+      <category>concurrency</category>
+      
+      
+      
+    </item>
+    
+    <item>
+      <title>JavaScript Performance Optimization: A Deep Dive</title>
+      <description>Explore advanced JavaScript performance optimization techniques including memory management, async patterns, and bundling strategies.</description>
+      <link>/posts/2024-03-15-javascript-performance-optimization/</link>
+      <guid isPermaLink="true">/posts/2024-03-15-javascript-performance-optimization/</guid>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <author> ()</author>
+      
+      
+      
+      <category>javascript</category>
+      
+      
+      
+      <category>performance</category>
+      
+      
+      
+      <category>web-development</category>
+      
+      
+      
+      <category>optimization</category>
+      
+      
+      
+    </item>
+    
+  </channel>
+</rss>

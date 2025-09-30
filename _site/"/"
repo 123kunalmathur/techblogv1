@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&#92;&quot;Tech Insights - Modern Software Engineering&#92;&quot; - </title>
+  <meta name="description" content="&#92;&quot;A minimalist tech blog focused on software engineering, web development, and systems programming. Clean, fast, and content-focused.&#92;&quot;">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/den-inspired.css">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="/&quot;/&quot;">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="&#92;&quot;Tech Insights - Modern Software Engineering&#92;&quot;">
+  <meta property="og:description" content="&#92;&quot;A minimalist tech blog focused on software engineering, web development, and systems programming. Clean, fast, and content-focused.&#92;&quot;">
+  <meta property="og:url" content="/&quot;/&quot;">
+  <meta property="og:type" content="website">
+  
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" title=" RSS Feed" href="/feed.xml">
+</head>
+<body>
+  <div class="site-container">
+    <header class="site-header">
+      <nav class="header-nav">
+        <a href="/" class="site-title"></a>
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/articles/" class="nav-link">Articles</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main class="main-content">
+      
+<div class="hero-section">
+  <h1 class="hero-title">Hi, I'm Alex 👋</h1>
+  
+  <div class="author-intro">
+    <div class="author-details">
+      <div class="author-bio">
+        <p></p>
+        
+        <p>I am a software engineer with 8+ years of experience building high-performance web applications and distributed systems. Some of my work includes:</p>
+        <ul>
+          <li>🚧 Leading development of cloud-native applications serving 100k+ users daily</li>
+          <li>🦀 Contributing to open source projects in Rust, JavaScript, and Python</li>
+          <li>📝 Writing about modern software engineering and web performance</li>
+          <li>🎯 Building developer tools and optimizing engineering productivity</li>
+        </ul>
+        
+        <p>You can read more about me on the <a href="/about/">About page</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <h2 class="section-title">Recent</h2>
+  
+  <ul class="articles-list">
+    
+  </ul>
+  
+  
+</section>
+    </main>
+    
+    <footer class="site-footer">
+      <p class="footer-text">
+        © 2025 . Built with ☕ and ♥ using <a href="https://11ty.dev">Eleventy</a>.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

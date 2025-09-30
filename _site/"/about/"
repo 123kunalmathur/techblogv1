@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&#92;&quot;About Tech Insights&#92;&quot; - </title>
+  <meta name="description" content="&#92;&quot;Learn about Alex Chen and the mission behind Tech Insights - sharing knowledge about modern software engineering and systems programming.&#92;&quot;">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/den-inspired.css">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="/&quot;/about/&quot;">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="&#92;&quot;About Tech Insights&#92;&quot;">
+  <meta property="og:description" content="&#92;&quot;Learn about Alex Chen and the mission behind Tech Insights - sharing knowledge about modern software engineering and systems programming.&#92;&quot;">
+  <meta property="og:url" content="/&quot;/about/&quot;">
+  <meta property="og:type" content="website">
+  
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" title=" RSS Feed" href="/feed.xml">
+</head>
+<body>
+  <div class="site-container">
+    <header class="site-header">
+      <nav class="header-nav">
+        <a href="/" class="site-title"></a>
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/articles/" class="nav-link">Articles</a></li>
+          <li><a href="/about/" class="nav-link active">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main class="main-content">
+      
+<div class="hero-section">
+  <h1 class="hero-title">About </h1>
+  
+  <div class="author-intro">
+    <div class="author-details">
+      <div class="author-bio">
+        <h2>t: about.njk<br>
+title: “About Tech Insights”<br>
+description: “Learn about Alex Chen and the mission behind Tech Insights - sharing knowledge about modern software engineering and systems programming.”<br>
+seoTitle: “About Alex Chen - Software Engineer &amp; Technical Writer”<br>
+seoDescription: “Software engineer with 8+ years experience in web development and systems programming. Creator of Tech Insights blog focused on clean code and performance.”<br>
+ogImage: “/assets/images/about-og.png”<br>
+permalink: “/about/”</h2>
+<h1>About Tech Insights</h1>
+<p>Welcome to <strong>Tech Insights</strong> - a minimalist tech blog focused on software engineering, systems programming, and web development. My mission is to share practical knowledge and insights that help developers build better, faster, and more maintainable software.</p>
+<h2>About Alex Chen</h2>
+<p>I’m a software engineer with 8+ years of experience building high-performance web applications and distributed systems. I specialize in full-stack JavaScript development, systems programming with Rust and Go, and cloud architecture.</p>
+<h3>My Journey</h3>
+<p>My passion for technology started early, but it was during my computer science studies that I truly fell in love with the art of writing clean, efficient code. Over the years, I’ve had the privilege of working on everything from high-traffic web applications to low-level systems programming.</p>
+<p><strong>Current Role</strong>: Senior Software Engineer at TechFlow Solutions, where I lead the development of cloud-native applications serving 100,000+ users daily.</p>
+<h3>Technical Expertise</h3>
+<p><strong>Programming Languages:</strong></p>
+<ul>
+<li><strong>Primary</strong>: JavaScript, TypeScript, Python, Rust</li>
+<li><strong>Secondary</strong>: Go, SQL, Bash, C++</li>
+</ul>
+<p><strong>Frameworks &amp; Tools:</strong></p>
+<ul>
+<li><strong>Frontend</strong>: React, Vue.js, Svelte</li>
+<li><strong>Backend</strong>: Node.js, FastAPI, Axum, Gin</li>
+<li><strong>Cloud</strong>: AWS, GCP, Docker, Kubernetes</li>
+<li><strong>Development</strong>: VS Code, Git, CI/CD pipelines</li>
+</ul>
+<p><strong>Specializations:</strong></p>
+<ul>
+<li>Web Performance Optimization</li>
+<li>Distributed Systems Architecture</li>
+<li>API Design &amp; Development</li>
+<li>DevOps &amp; Infrastructure</li>
+<li>Technical Writing &amp; Documentation</li>
+</ul>
+<h3>Open Source &amp; Community</h3>
+<p>I’m passionate about giving back to the developer community:</p>
+<ul>
+<li><strong>Maintainer</strong> of <a href="https://github.com/alexchen/web-perf-toolkit">web-perf-toolkit</a> - Performance monitoring utilities</li>
+<li><strong>Creator</strong> of <a href="https://github.com/alexchen/rust-api-templates">rust-api-templates</a> - Production-ready API templates</li>
+<li><strong>Contributor</strong> to Eleventy core, Prism.js, and various npm packages</li>
+</ul>
+<h3>Speaking &amp; Writing</h3>
+<p>I enjoy sharing knowledge through:</p>
+<ul>
+<li><strong>Conference talks</strong> on web performance and Rust programming</li>
+<li><strong>Technical articles</strong> in industry publications</li>
+<li><strong>Mentoring</strong> junior developers and career changers</li>
+<li><strong>This blog</strong> where I explore practical programming topics</li>
+</ul>
+<h2>About This Blog</h2>
+<p><strong>Tech Insights</strong> was born from my belief that technical content should be:</p>
+<ul>
+<li><strong>Practical</strong>: Real-world examples you can apply immediately</li>
+<li><strong>Accessible</strong>: Complex topics explained clearly</li>
+<li><strong>Performance-focused</strong>: Fast loading, minimal dependencies</li>
+<li><strong>Community-driven</strong>: Encouraging discussion and learning</li>
+</ul>
+<h3>What You’ll Find Here</h3>
+<p>I write about topics I’m passionate about and encounter in my daily work:</p>
+<ul>
+<li><strong>Web Development</strong>: JavaScript/TypeScript, performance optimization, modern frameworks</li>
+<li><strong>Systems Programming</strong>: Rust, Go, concurrency, memory management</li>
+<li><strong>DevOps</strong>: Cloud architecture, CI/CD, monitoring, scalability</li>
+<li><strong>Career Development</strong>: Growing as a software engineer, technical leadership</li>
+</ul>
+<h3>Technology Stack</h3>
+<p>This blog itself reflects my values:</p>
+<ul>
+<li><strong>Static Site Generator</strong>: Eleventy (11ty) for speed and simplicity</li>
+<li><strong>Styling</strong>: Sass with mobile-first responsive design</li>
+<li><strong>Syntax Highlighting</strong>: Prism.js supporting multiple languages</li>
+<li><strong>Performance</strong>: &lt;2 second load times, optimized images, minimal JavaScript</li>
+<li><strong>Accessibility</strong>: WCAG 2.1 AA compliant, screen reader friendly</li>
+</ul>
+<h2>Let’s Connect</h2>
+<p>I love connecting with fellow developers and discussing technology:</p>
+<ul>
+<li><strong>Email</strong>: <a href="mailto:alex@tech-insights.dev">alex@tech-insights.dev</a></li>
+<li><strong>GitHub</strong>: <a href="https://github.com/alexchen">github.com/alexchen</a></li>
+<li><strong>Twitter</strong>: <a href="https://twitter.com/alexchen_dev">@alexchen_dev</a></li>
+<li><strong>LinkedIn</strong>: <a href="https://linkedin.com/in/alexchen-dev">linkedin.com/in/alexchen-dev</a></li>
+<li><strong>Mastodon</strong>: <a href="https://hachyderm.io/@alexchen">@alexchen@hachyderm.io</a></li>
+</ul>
+<h3>What I’m Available For</h3>
+<p>✅ <strong>Technical writing collaboration</strong><br>
+✅ <strong>Speaking opportunities at conferences and meetups</strong><br>
+✅ <strong>Open source contributions and code reviews</strong><br>
+✅ <strong>Mentoring discussions with developers</strong></p>
+<p>❌ Freelance projects<br>
+❌ Job recruitment</p>
+<h3>Response Time</h3>
+<p>I typically respond to emails within 24-48 hours. For urgent matters, Twitter DM might be faster.</p>
+<h2>Frequently Asked Questions</h2>
+<p><strong>Q: How often do you publish new content?</strong><br>
+A: I aim for 1-2 high-quality posts per month. I prefer depth over frequency.</p>
+<p><strong>Q: Do you accept guest posts?</strong><br>
+A: Currently, I’m not accepting guest posts, but I’m always open to collaboration ideas.</p>
+<p><strong>Q: Can I suggest topics for future articles?</strong><br>
+A: Absolutely! Reach out with your suggestions - I love hearing what the community wants to learn about.</p>
+<p><strong>Q: Do you offer consulting or freelance services?</strong><br>
+A: I’m currently focused on my full-time role and this blog, so I’m not taking on freelance projects.</p>
+<p><strong>Q: How can I stay updated with new posts?</strong><br>
+A: You can follow me on social media or subscribe to the <a href="/feed.xml">RSS feed</a>.</p>
+<hr>
+<p><em>Thank you for reading and being part of the Tech Insights community! I hope you find the content helpful in your own development journey.</em></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
+    
+    <footer class="site-footer">
+      <p class="footer-text">
+        © 2025 . Built with ☕ and ♥ using <a href="https://11ty.dev">Eleventy</a>.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

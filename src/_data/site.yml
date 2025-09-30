@@ -1,0 +1,182 @@
+# Site Configuration
+# Constitutional compliance: SEO optimization, professional branding, <2s load time
+# Last updated: 2025-09-30
+
+# Basic Site Information
+title: "Tech Insights"
+subtitle: "Deep dives into modern technology and software engineering"
+description: "A minimalist tech blog focused on software engineering, systems programming, and web development. Clean, fast, and content-focused."
+url: "https://tech-insights.dev"
+baseUrl: ""
+
+# SEO and Social Meta
+keywords: 
+  - "software engineering"
+  - "web development" 
+  - "systems programming"
+  - "javascript"
+  - "typescript"
+  - "python"
+  - "rust"
+  - "golang"
+  - "performance"
+  - "clean code"
+  - "tech blog"
+
+# Social Media / Open Graph
+social:
+  twitter: "@techinsights"
+  github: "techinsights"
+  linkedin: "tech-insights"
+  mastodon: "@techinsights@hachyderm.io"
+
+# Open Graph defaults
+og:
+  type: "website"
+  locale: "en_US"
+  site_name: "Tech Insights"
+  image: "/assets/images/og-default.png"
+  image_alt: "Tech Insights - Clean minimalist tech blog"
+
+# Twitter Card defaults  
+twitter:
+  card: "summary_large_image"
+  site: "@techinsights"
+  creator: "@techinsights"
+
+# Technical Configuration
+language: "en"
+timezone: "UTC"
+charset: "UTF-8"
+
+# Performance settings (Constitutional requirement: <2s load time)
+performance:
+  lazyLoadImages: true
+  minifyHTML: true
+  minifyCSS: true
+  compressImages: true
+  enableServiceWorker: false # Keeping minimal per constitution
+  
+# Content settings
+content:
+  excerptLength: 200
+  defaultReadingSpeed: 200 # words per minute for reading time calculation
+  showReadingTime: true
+  showAuthorBio: true
+  enableComments: false # Keeping minimal per constitution
+  
+# Syntax highlighting configuration
+syntaxHighlighting:
+  theme: "dark"
+  lineNumbers: true
+  copyButton: true
+  languages:
+    web:
+      - "javascript"
+      - "typescript" 
+      - "html"
+      - "css"
+      - "scss"
+      - "json"
+      - "yaml"
+    backend:
+      - "python"
+      - "sql"
+      - "bash"
+    systems:
+      - "rust"
+      - "go"
+      - "cpp"
+      - "c"
+
+# Navigation structure
+navigation:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "Articles"
+      url: "/articles/"
+      weight: 2
+    - name: "About"
+      url: "/about/"
+      weight: 3
+  footer:
+    - name: "RSS Feed"
+      url: "/feed.xml"
+      external: false
+    - name: "Privacy"
+      url: "/privacy/"
+      external: false
+
+# Pagination settings
+pagination:
+  articlesPerPage: 10
+  enableInfiniteScroll: false # Keeping simple per constitution
+
+# RSS Feed configuration
+rss:
+  enabled: true
+  title: "Tech Insights - Latest Articles"
+  description: "Latest articles from Tech Insights tech blog"
+  feedPath: "/feed.xml"
+  itemCount: 20
+
+# Sitemap configuration
+sitemap:
+  enabled: true
+  changefreq: "weekly"
+  priority: 0.8
+  path: "/sitemap.xml"
+
+# Schema.org structured data
+schema:
+  type: "Blog"
+  name: "Tech Insights"
+  description: "A minimalist tech blog focused on software engineering and web development"
+  publisher:
+    type: "Person"
+    name: "Tech Author" # Will be overridden by author data
+  mainEntityOfPage: true
+  
+# Analytics (privacy-focused)
+analytics:
+  enabled: false # Keeping minimal per constitution
+  provider: "none"
+  
+# Security headers
+security:
+  contentSecurityPolicy: "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data: https:; font-src 'self';"
+  referrerPolicy: "strict-origin-when-cross-origin"
+  permissionsPolicy: "geolocation=(), microphone=(), camera=()"
+
+# Build information
+build:
+  environment: "production"
+  timestamp: "2025-09-30T00:00:00Z"
+  version: "1.0.0"
+  generator: "Eleventy"
+  node_version: "18.x"
+
+# Asset optimization
+assets:
+  imageFormats: ["webp", "jpg", "png"]
+  imageSizes: [320, 640, 960, 1280]
+  imageQuality: 85
+  cssMinification: true
+  jsMinification: true
+
+# Accessibility settings (Constitutional requirement: WCAG 2.1 AA)
+accessibility:
+  skipToContent: true
+  focusIndicators: true
+  altTextRequired: true
+  contrastRatio: "AA" # 4.5:1 minimum
+  fontSize: "16px" # Base font size
+  
+# Development settings
+development:
+  showDrafts: false
+  livereload: true
+  port: 8080
+  host: "localhost"

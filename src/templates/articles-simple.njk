@@ -1,0 +1,30 @@
+---
+layout: base-simple.njk
+---
+
+<div class="hero-section">
+  <h1 class="hero-title">All Articles</h1>
+  <p class="hero-subtitle">{{ collections.posts.length }} articles on software engineering and technology</p>
+</div>
+
+<ul class="articles-list">
+  {% for post in collections.posts %}
+  <li class="article-item">
+    <h3 class="article-title">
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </h3>
+    <div class="article-meta">
+      {{ post.date | readableDate }} · {{ post.templateContent | readingTime }} min read
+      {% if post.data.tags and post.data.tags.length %}
+      ·
+      {% for tag in post.data.tags %}
+        {% if tag != "post" %}#{{ tag }}{% if not loop.last %} {% endif %}{% endif %}
+      {% endfor %}
+      {% endif %}
+    </div>
+    <p class="article-excerpt">
+      {{ post.data.description }}
+    </p>
+  </li>
+  {% endfor %}
+</ul>
