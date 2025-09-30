@@ -30,7 +30,8 @@
     "js-yaml": "^4.1.0",
     "luxon": "^3.4.4",
     "markdown-it": "^14.0.0",
-    "markdown-it-prism": "^2.3.0"
+    "markdown-it-prism": "^2.3.0",
+    "prismjs": "^1.30.0"
   },
   "devDependencies": {
     "axe-core": "^4.8.3",
