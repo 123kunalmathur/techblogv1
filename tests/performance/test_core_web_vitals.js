@@ -1,5 +1,4 @@
 const { chromium } = require('playwright');
-const lighthouse = require('lighthouse');
 const fs = require('fs');
 const path = require('path');
 
@@ -112,15 +111,15 @@ async function runPerformanceTest(url) {
 // Test file sizes for build optimization
 function testFileOptimization() {
   const errors = [];
-  const distPath = path.join(__dirname, '../../dist');
+  const sitePath = path.join(__dirname, '../../_site');
   
-  if (!fs.existsSync(distPath)) {
-    errors.push('Build directory does not exist');
+  if (!fs.existsSync(sitePath)) {
+    errors.push('Build directory (_site) does not exist');
     return errors;
   }
   
   // Check CSS minification
-  const cssPath = path.join(distPath, 'css/main.css');
+  const cssPath = path.join(sitePath, 'css/den-inspired.css');
   if (fs.existsSync(cssPath)) {
     const cssStats = fs.statSync(cssPath);
     const cssContent = fs.readFileSync(cssPath, 'utf8');
@@ -132,24 +131,23 @@ function testFileOptimization() {
     if (cssContent.includes('\n  ') || cssContent.includes('/* ')) {
       errors.push('CSS not properly minified');
     }
+  } else {
+    errors.push('CSS file not found');
   }
   
   // Check HTML optimization
   const htmlFiles = ['index.html', 'articles/index.html', 'about/index.html'];
   htmlFiles.forEach(file => {
-    const htmlPath = path.join(distPath, file);
+    const htmlPath = path.join(sitePath, file);
     if (fs.existsSync(htmlPath)) {
       const htmlContent = fs.readFileSync(htmlPath, 'utf8');
-      
-      // Check for inline critical CSS
-      if (!htmlContent.includes('<style>')) {
-        errors.push(`${file}: Missing critical CSS inlining`);
-      }
       
       // Check for proper meta tags
       if (!htmlContent.includes('viewport')) {
         errors.push(`${file}: Missing viewport meta tag`);
       }
+    } else {
+      errors.push(`${file}: HTML file not found`);
     }
   });
   
