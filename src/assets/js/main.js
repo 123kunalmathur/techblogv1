@@ -340,11 +340,10 @@ class ThemeController {
       isDark ? 'Switch to light mode' : 'Switch to dark mode'
     );
     
-    // Update text content
-    const textElement = this.toggleButton.querySelector('.theme-toggle-text');
-    if (textElement) {
-      textElement.textContent = isDark ? 'Light' : 'Dark';
-    }
+    // Update tooltip text
+    this.toggleButton.setAttribute('title', 
+      isDark ? 'Switch to light mode' : 'Switch to dark mode'
+    );
   }
 }
 

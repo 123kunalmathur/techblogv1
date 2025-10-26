@@ -32,9 +32,10 @@
   --color-code-text: #ff6b9d;
   --color-code-border: #404040;
 
-  // Navigation and UI elements
-  --color-nav-background: #1e1e1e;
-  --color-nav-border: #404040;
+  // Navigation and UI elements (subtle, low contrast)
+  --color-nav-background: #121212;
+  --color-nav-border: #1a1a1a;
+  --color-nav-shadow: rgba(0, 0, 0, 0.15);
   --color-button-background: #2d2d2d;
   --color-button-hover: #404040;
   --color-button-text: #121212;
