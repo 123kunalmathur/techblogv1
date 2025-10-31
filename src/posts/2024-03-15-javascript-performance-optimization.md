@@ -398,4 +398,4 @@ Remember: **measure first, optimize second**. Always profile your application to
 
 ---
 
-*Have questions about JavaScript performance? Feel free to reach out on [Twitter](https://twitter.com/alexchen_dev) or check out my other [performance-related articles](/articles/?tag=performance).*
+*Have questions about performance optimization? Feel free to reach out on [LinkedIn](https://linkedin.com/in/kunal-mathur) or check out my other [performance-related articles](/articles/?tag=performance).*

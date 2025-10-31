@@ -746,4 +746,4 @@ Rust proves that you don't have to choose between safety and performance. It's t
 
 ---
 
-*Want to dive deeper into Rust? Check out my [Rust learning resources](/articles/?tag=rust) or connect with me on [GitHub](https://github.com/alexchen) for code reviews and discussions.*
+*Want to dive deeper into embedded systems with Rust? Check out my [embedded systems articles](/articles/?tag=embedded) or connect with me on [GitHub](https://github.com/kunalmathur) for code reviews and discussions.*

@@ -3,121 +3,104 @@
 # Last updated: 2025-09-30
 
 # Basic Information
-name: "Alex Chen"
-role: "Software Engineer & Technical Writer"
-tagline: "Building scalable systems and sharing knowledge"
-email: "alex@tech-insights.dev"
+name: "Kunal Mathur"
+role: "Software Engineer"
+tagline: "Architecting scalable IoT & embedded platforms"
+email: "kunal.mathur@example.com"
 
 # Professional Summary
 bio: |
-  Software engineer with 8+ years of experience building high-performance web applications and distributed systems. 
-  
-  I specialize in full-stack JavaScript development, systems programming with Rust and Go, and cloud architecture. 
-  My passion lies in writing clean, maintainable code and sharing insights about modern development practices.
-  
-  When I'm not coding, you'll find me contributing to open source projects, mentoring junior developers, or exploring 
-  the latest developments in WebAssembly and edge computing.
+  Software engineer focused on architecting and delivering scalable IoT products and embedded platforms that evolve with growing business and technical requirements.
+
+  I design and build robust C++ and Embedded Linux applications for field deployment, focusing on resource optimization, reliability, and secure remote updates. My experience includes developing Yocto-based distributions, creating reusable platform layers, and establishing patterns that enable multiple product lines to share coherent, maintainable codebases.
+
+  Currently I architect codebases spanning products at Sensormatic (Johnson Controls), leading a team of engineers through technical complexity while maintaining a strong product focus. I consistently seek pragmatic solutions that balance current requirements with future scalability needs.
+
+  I'm continually refining processes around build reproducibility, hardware abstraction, observability, and deployment orchestration—pushing for solutions that stand the test of time.
 
 # Short bio for article bylines
-bio_short: "Software engineer specializing in web performance and systems programming. 8+ years building scalable applications."
+bio_short: "Embedded & IoT engineer architecting scalable C++/Yocto Linux platforms at Sensormatic (Johnson Controls)."
 
 # Professional Links
 links:
-  website: "https://tech-insights.dev"
-  github: "https://github.com/alexchen"
-  twitter: "https://twitter.com/alexchen_dev"
-  linkedin: "https://linkedin.com/in/alexchen-dev"
-  mastodon: "https://hachyderm.io/@alexchen"
+  website: "https://kunalmathur.dev"
+  github: "https://github.com/kunalmathur"
+  linkedin: "https://linkedin.com/in/kunal-mathur"
   
 # Avatar/Photo
 avatar:
   src: "/assets/images/author-avatar.jpg"
-  alt: "Alex Chen - Software Engineer"
+  alt: "Kunal Mathur - Software Engineer"
   width: 200
   height: 200
 
 # Skills and Technologies
 skills:
   languages:
-    primary: ["JavaScript", "TypeScript", "Python", "Rust"]
-    secondary: ["Go", "SQL", "Bash", "C++"]
-  frameworks:
-    frontend: ["React", "Vue.js", "Svelte"]
-    backend: ["Node.js", "FastAPI", "Axum", "Gin"]
+    primary: ["C++", "C", "Python", "Bash"]
+    secondary: ["JavaScript", "Yocto Recipes"]
+  platforms:
+    embedded: ["Embedded Linux", "Yocto", "Systemd"]
+    hardware: ["ARM", "Edge Devices"]
+  frameworks_tooling:
+    build_systems: ["CMake", "Yocto BitBake", Makefile]
+    scripting: ["Python Tooling", "Shell Automation"]
   tools:
-    development: ["VS Code", "Git", "Docker", "Kubernetes"]
-    cloud: ["AWS", "GCP", "Vercel", "Netlify"]
+    development: ["Git", "VS Code", "GCC", "CMake", "GDB"]
+    ops: ["Docker", "OTA Update Systems"]
   specialties:
-    - "Web Performance Optimization"
-    - "Distributed Systems"
-    - "API Design"
-    - "DevOps & CI/CD"
-    - "Technical Writing"
+    - "IoT Platform Architecture"
+    - "Embedded Linux Distribution Engineering"
+    - "C++ Application Design"
+    - "Yocto Build & Layer Strategy"
+    - "Cross-Product Codebase Architecture"
+    - "Remote Device Management & Observability"
+    - "Scalable Update & Deployment Pipelines"
 
 # Work Experience (relevant highlights)
 experience:
   current:
-    title: "Senior Software Engineer"
-    company: "TechFlow Solutions"
-    duration: "2022 - Present"
-    description: "Leading full-stack development of cloud-native applications serving 100k+ users."
-  
-  previous:
-    - title: "Full-Stack Developer"
-      company: "StartupLab"
-      duration: "2019 - 2022"
-      description: "Built scalable web applications from MVP to production using modern JavaScript stack."
-    
-    - title: "Software Developer"
-      company: "DataSys Corp"
-      duration: "2017 - 2019"
-      description: "Developed high-performance data processing pipelines and RESTful APIs."
+    title: "Software Engineer"
+    company: "Sensormatic (Johnson Controls)"
+    duration: "2023 - Present"
+    description: "Architecting shared embedded/IoT codebases across product lines; leading a team to scale platforms, optimize C++/Yocto stacks, and ensure reliability & future-ready design."
+  previous: []
 
 # Education
 education:
-  degree: "Bachelor of Science in Computer Science"
-  university: "State University of Technology"
-  graduation: "2017"
-  focus: "Software Engineering & Algorithms"
+  degree: "Bachelor in Electronics and Communication Engineering"
+  university: "The LNM Institute of Information Technology"
+  graduation: "2023"
+  focus: "Software Engineering & Embedded Systems"
 
 # Certifications & Achievements
-certifications:
-  - name: "AWS Solutions Architect - Associate"
-    issuer: "Amazon Web Services"
-    year: "2023"
-  - name: "Google Cloud Professional Cloud Architect"
-    issuer: "Google Cloud"
-    year: "2022"
+# certifications:
+#   - name: "AWS Solutions Architect - Associate"
+#     issuer: "Amazon Web Services"
+#     year: "2023"
+#   - name: "Google Cloud Professional Cloud Architect"
+#     issuer: "Google Cloud"
+#     year: "2022"
 
 # Open Source Contributions
 opensource:
   active_projects:
-    - name: "web-perf-toolkit"
-      description: "Performance monitoring utilities for web applications"
-      role: "Maintainer"
-      url: "https://github.com/alexchen/web-perf-toolkit"
-    
-    - name: "rust-api-templates"
-      description: "Production-ready API templates in Rust"
+    - name: "embedded-tools"
+      description: "Development utilities for embedded systems"
       role: "Creator"
-      url: "https://github.com/alexchen/rust-api-templates"
+      url: "https://github.com/kunalmathur/embedded-tools"
+    
+    - name: "yocto-layers"
+      description: "Reusable Yocto layers for IoT platforms"
+      role: "Maintainer"
+      url: "https://github.com/kunalmathur/yocto-layers"
   
   contributions:
-    - "50+ commits to Eleventy core"
-    - "Documentation improvements for Prism.js"
-    - "Bug fixes in various npm packages"
+    - "Contributions to OpenEmbedded/Yocto Project"
+    - "IoT device driver improvements"
+    - "Embedded Linux optimization patches"
 
-# Speaking & Writing
-speaking:
-  talks:
-    - title: "Building Fast Web Apps: A Performance Deep Dive"
-      event: "WebDev Conference 2024"
-      date: "2024-03-15"
-    
-    - title: "Rust for JavaScript Developers"
-      event: "Local Meetup Group"
-      date: "2023-11-20"
-
+# Writing
 writing:
   publications:
     - title: "Modern Web Performance Patterns"
@@ -132,7 +115,7 @@ writing:
 
 # Contact Preferences
 contact:
-  email: "alex@tech-insights.dev"
+  email: "123kunalmathur@gmail.com"
   preferred_method: "email"
   response_time: "24-48 hours"
   available_for:
@@ -140,35 +123,33 @@ contact:
     - "Speaking opportunities"
     - "Open source contributions"
     - "Mentoring discussions"
-  not_available_for:
-    - "Freelance projects"
-    - "Job recruitment"
 
 # Location & Timezone
 location:
-  city: "San Francisco"
-  state: "CA"
-  country: "USA"
-  timezone: "America/Los_Angeles"
+  city: "Bangalore"
+  state: "KA"
+  country: "India"
+  timezone: "Asia/Kolkata"
   remote_friendly: true
 
 # Personal Interests (brief, tech-related)
 interests:
-  - "WebAssembly and edge computing"
   - "Sustainable software development"
   - "Developer productivity tools"
-  - "Technical documentation"
-  - "Open source community building"
+  - "Exploring new technologies"
+  - "Exploring new places"
+  - "Tech products and gadgets"
 
 # Blog-specific metadata
 blog:
   author_since: "2023-01-01"
   post_count: 0 # Will be dynamically calculated
   categories_authored:
-    - "Web Development"
-    - "Systems Programming" 
-    - "Performance"
-    - "DevOps"
+    - "Embedded Systems"
+    - "IoT Architecture" 
+    - "C++ Development"
+    - "Yocto Project"
+    - "Systems Programming"
     - "Career Development"
   
   writing_style: "practical, example-driven, accessible"
@@ -178,14 +159,14 @@ blog:
 # SEO and structured data
 seo:
   schema_type: "Person"
-  job_title: "Software Engineer & Technical Writer"
-  works_for: "TechFlow Solutions"
+  job_title: "Software Engineer (Embedded & IoT)"
+  works_for: "Sensormatic (Johnson Controls)"
   knows_about:
-    - "JavaScript"
-    - "TypeScript"
-    - "Python"
-    - "Rust"
-    - "Web Development"
-    - "Systems Programming"
-    - "Cloud Computing"
-    - "Performance Optimization"
+    - "Embedded Systems"
+    - "IoT Architecture"
+    - "C++"
+    - "Embedded Linux"
+    - "Yocto Project"
+    - "Device Observability"
+    - "Remote Update Pipelines"
+    - "Systems Design"

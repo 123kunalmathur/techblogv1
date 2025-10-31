@@ -331,4 +331,4 @@ MIT License - see LICENSE file for details.
 
 **Tech Insights** - A constitutional approach to tech blogging: minimal, fast, accessible, and content-focused.
 
-Made with ☕ and ♥ by Alex Chen
+Made with ☕ and ♥ by Kunal Mathur
