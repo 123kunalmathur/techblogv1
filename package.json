@@ -23,8 +23,16 @@
     "minimal",
     "tech-blog"
   ],
-  "author": "Tech Blogger",
+  "author": "Kunal Mathur <123kunalmathur@gmail.com>",
   "license": "MIT",
+  "homepage": "https://kunalmathur.github.io/tech-blog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kunalmathur/tech-blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kunalmathur/tech-blog/issues"
+  },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "js-yaml": "^4.1.0",
