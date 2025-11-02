@@ -18,9 +18,9 @@ layout: base-simple.njk
           <li>👥 Leading engineering teams through complex technical challenges</li>
         </ul>
         
-        <p>You can read more about me on the <a href="/about/">About page</a>.</p>
+        <p>You can read more about me on the <a href="{{ '/about/' | url }}">About page</a>.</p>
         
-        <p>I enjoy sharing insights from my journey working with embedded systems, development tools, gadgets and the latest tech that I like  <a href="/articles/"> articles</a></p>
+        <p>I enjoy sharing insights from my journey working with embedded systems, development tools, gadgets and the latest tech that I like  <a href="{{ '/articles/' | url }}"> articles</a></p>
       </div>
     </div>
   </div>
@@ -33,7 +33,7 @@ layout: base-simple.njk
     {% for post in collections.posts | slice(0, 5) %}
     <li class="article-item">
       <h3 class="article-title">
-        <a href="{{ post.url }}">{{ post.data.title }}</a>
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
       </h3>
       <div class="article-meta">
         {{ post.date | readableDate }} · {{ post.templateContent | readingTime }} min read
@@ -46,6 +46,6 @@ layout: base-simple.njk
   </ul>
   
   {% if collections.posts.length > 5 %}
-  <p><a href="/articles/">View all articles →</a></p>
+  <p><a href="{{ '/articles/' | url }}">View all articles →</a></p>
   {% endif %}
 </section>

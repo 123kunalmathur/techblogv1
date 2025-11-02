@@ -232,6 +232,8 @@ module.exports = function(eleventyConfig) {
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     
+    pathPrefix: "/techblogv1/",
+    
     dir: {
       input: "src",
       includes: "templates",

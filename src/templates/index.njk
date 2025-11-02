@@ -100,7 +100,7 @@ layout: base
         <article class="article-card{% if post.data.featured %} featured{% endif %}">
           <header class="card-header">
             <h3 class="card-title">
-              <a href="{{ post.url }}">{{ post.data.title }}</a>
+              <a href="{{ post.url | url }}">{{ post.data.title }}</a>
             </h3>
             
             <div class="card-meta">
@@ -117,21 +117,21 @@ layout: base
             {% if post.data.tags and post.data.tags.length > 0 %}
             <div class="card-tags">
               {% for tag in post.data.tags | slice(0, 3) %}
-              <a href="/articles/tag/{{ tag | slug }}/" class="tag-link">{{ tag }}</a>
+              <a href="{{ '/articles/tag/' | url }}{{ tag | slug }}/" class="tag-link">{{ tag }}</a>
               {% endfor %}
             </div>
             {% endif %}
           </div>
           
           <footer class="card-footer">
-            <a href="{{ post.url }}" class="read-more">Read article →</a>
+            <a href="{{ post.url | url }}" class="read-more">Read article →</a>
           </footer>
         </article>
         {% endfor %}
       </div>
       
       <div class="section-actions">
-        <a href="/articles/" class="view-all-link">View all articles →</a>
+        <a href="{{ '/articles/' | url }}" class="view-all-link">View all articles →</a>
       </div>
       
       {% else %}
@@ -157,7 +157,7 @@ layout: base
         <article class="featured-card">
           <header class="featured-header">
             <h3 class="featured-title">
-              <a href="{{ post.url }}">{{ post.data.title }}</a>
+              <a href="{{ post.url | url }}">{{ post.data.title }}</a>
             </h3>
             
             <div class="featured-meta">
@@ -198,7 +198,7 @@ layout: base
       <div class="topics-cloud">
         {% for tag in allTags | slice(0, 15) %}
         {% set taggedPosts = collections.posts | tagged(tag) %}
-        <a href="/articles/tag/{{ tag | slug }}/" 
+        <a href="{{ '/articles/tag/' | url }}{{ tag | slug }}/" 
            class="topic-link" 
            data-count="{{ taggedPosts.length }}">
           {{ tag }} <span class="topic-count">({{ taggedPosts.length }})</span>
@@ -207,7 +207,7 @@ layout: base
       </div>
       
       <div class="section-actions">
-        <a href="/articles/" class="browse-all-link">Browse all topics →</a>
+        <a href="{{ '/articles/' | url }}" class="browse-all-link">Browse all topics →</a>
       </div>
     </div>
   </section>
@@ -227,7 +227,7 @@ layout: base
     "name": "{{ site.author.name }}",
     "jobTitle": "{{ site.author.title }}",
     "description": "{{ site.author.bio }}",
-    "url": "{{ site.url }}/about/",
+    "url": "{{ site.url }}{{ '/about/' | url }}",
     "sameAs": [
       {% if site.author.social.github %}"{{ site.author.social.github }}"{% endif %}
       {% if site.author.social.linkedin %}{% if site.author.social.github %},{% endif %}"{{ site.author.social.linkedin }}"{% endif %}
@@ -240,7 +240,7 @@ layout: base
       "@type": "BlogPosting",
       "headline": "{{ post.data.title }}",
       "description": "{{ post.data.excerpt }}",
-      "url": "{{ site.url }}{{ post.url }}",
+      "url": "{{ site.url }}{{ post.url | url }}",
       "datePublished": "{{ post.data.date | htmlDateString }}",
       "author": {
         "@type": "Person",

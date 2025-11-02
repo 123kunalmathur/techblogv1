@@ -7,20 +7,20 @@
   <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
   
   <!-- CSS -->
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/assets/prism-tomorrow.css">
+  <link rel="stylesheet" href="{{ '/' | url }}css/main.css">
+  <link rel="stylesheet" href="{{ '/' | url }}assets/prism-tomorrow.css">
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
   
   <!-- Open Graph -->
   <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url | url }}">
   <meta property="og:type" content="website">
   
   <!-- RSS Feed -->
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS Feed" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS Feed" href="{{ '/feed.xml' | url }}">
 </head>
 <body>
   <!-- Theme toggle button positioned in top-right corner -->
@@ -54,11 +54,11 @@
   <div class="site-container">
     <header class="site-header">
       <nav class="header-nav">
-        <a href="/" class="site-title">{{ site.title }}</a>
+        <a href="{{ '/' | url }}" class="site-title">{{ site.title }}</a>
         <ul class="nav-links">
-          <li><a href="/" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
-          <li><a href="/articles/" class="nav-link{% if '/articles/' in page.url %} active{% endif %}">Articles</a></li>
-          <li><a href="/about/" class="nav-link{% if '/about/' in page.url %} active{% endif %}">About</a></li>
+          <li><a href="{{ '/' | url }}" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
+          <li><a href="{{ '/articles/' | url }}" class="nav-link{% if '/articles/' in page.url %} active{% endif %}">Articles</a></li>
+          <li><a href="{{ '/about/' | url }}" class="nav-link{% if '/about/' in page.url %} active{% endif %}">About</a></li>
         </ul>
       </nav>
     </header>
@@ -75,7 +75,7 @@
   </div>
   
   <!-- JavaScript -->
-  <script src="/assets/js/theme-manager.js"></script>
-  <script src="/assets/js/main.js"></script>
+  <script src="{{ '/assets/js/theme-manager.js' | url }}"></script>
+  <script src="{{ '/assets/js/main.js' | url }}"></script>
 </body>
 </html>
